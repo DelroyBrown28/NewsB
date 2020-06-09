@@ -18,6 +18,19 @@ a {
     color: #000;
 }
 
+.addShadow {
+    border-radius: 0px;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    box-shadow: 5px 5px 10px #c2c2c2,
+        -5px -5px 10px #ffffff;
+
+}
+
+.slowpacity {
+    opacity: 1;
+    transition: 2s;
+}
+
 
 @media only screen and (min-width : 1224px) {
 
@@ -27,8 +40,6 @@ a {
         width: 98%;
         height: 100%;
         margin: auto;
-        border-left: 1px solid #000;
-        border-right: 1px solid #000;
     }
 
     .topics_text_wrap {
@@ -45,7 +56,7 @@ a {
         font-weight: 400;
         color: #fff;
 
-        
+
     }
 
     #topics_text {
@@ -61,8 +72,10 @@ a {
     .tabs_wrap {
         margin: auto;
         display: flex;
+        height: 50%;
         justify-content: space-evenly;
         width: 93%;
+
 
     }
 
@@ -73,16 +86,12 @@ a {
     .tabs {
         width: 300px;
         height: 350px;
+        margin: auto;
         display: flex;
         flex-flow: column;
         cursor: pointer;
-        border-radius: 20px;
         transition: 0.5s;
-
-        border-radius: 0px;
-        background: linear-gradient(145deg, #ffffff, #f5f5f5);
-        box-shadow: 5px 5px 10px #c2c2c2,
-            -5px -5px 10px #ffffff;
+        opacity: 0;
 
     }
 
@@ -103,17 +112,6 @@ a {
     .news_icon {
         width: 150px;
         height: 28px;
-    }
-
-    .tabs:hover {
-        background: #ffffff;
-        box-shadow: 39px 39px 78px #707070,
-            -39px -39px 78px #ffffff;
-
-    }
-
-    .tabs:hover>.tab_name {
-        opacity: 1;
     }
 
     .tabs:active {
