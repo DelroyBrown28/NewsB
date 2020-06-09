@@ -34,6 +34,8 @@ a {
 
 @media only screen and (min-width : 1224px) {
 
+    /*----------MAIN CONTENTS----------*/
+
     #main_wrap,
     #history_wrap {
         display: flex;
@@ -47,8 +49,8 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        left: 20px;
-        margin-top: 55px;
+        left: 0px;
+        margin-top: 200px;
         height: 45px;
         width: 125px;
         transform: rotate(90deg);
@@ -113,6 +115,18 @@ a {
         width: 150px;
         height: 28px;
     }
+
+    /*----------//  MAIN CONTENTS----------*/
+    /*----------HISTORY CONTENTS----------*/
+
+       
+    
+    
+    
+    
+    /*----------//  HISTORY CONTENTS----------*/
+
+    /*----HOVERS & SUCH----*/
 
     .tabs:active {
         box-shadow: none;

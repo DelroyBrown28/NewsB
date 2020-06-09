@@ -14,6 +14,8 @@ $(document).ready(function () {
         })
     })
 
+    // hovers for tabs
+
     $('.history_tab').hover(function () {
         $(this).addClass('addShadow');
         $('.history_name').css('opacity', '1');
@@ -34,6 +36,14 @@ $(document).ready(function () {
     $('.business_tab').hover(function () {
         $(this).addClass('addShadow');
         $('.business_name').css('opacity', '1');
+    })
+
+    // History tab Click
+
+    $('.history_tab').click(function() {
+        $('.topics_text_wrap').fadeOut('slow', function() {
+            location.href = '#jumpToHistory';
+        })
     })
 
 
