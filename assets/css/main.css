@@ -31,11 +31,43 @@ a {
         border-right: 1px solid #000;
     }
 
+    .topics_text_wrap {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 20px;
+        margin-top: 55px;
+        height: 45px;
+        width: 125px;
+        transform: rotate(90deg);
+        font-size: 30px;
+        font-weight: 400;
+        color: #fff;
+
+        
+    }
+
+    #topics_text {
+        color: #fff;
+        height: 0%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+    }
+
     .tabs_wrap {
         margin: auto;
         display: flex;
         justify-content: space-evenly;
         width: 93%;
+
+    }
+
+    .tabs_title_contents {
+        flex-flow: column;
     }
 
     .tabs {
