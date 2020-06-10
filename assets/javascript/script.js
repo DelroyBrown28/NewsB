@@ -4,17 +4,18 @@ $(document).ready(function () {
     function onLoadFadeIn() {
         $('.tabs').animate({
             opacity: '1'
-        }, 2000)
+        }, 1000)
     }
     window.onload = onLoadFadeIn;
 
-    $('.tabs').hover(function() {
+    $('.tabs').hover(function () {
         $('#topics_text').animate({
             height: '100%'
         })
     })
 
     // hovers for tabs
+
 
     $('.history_tab').hover(function () {
         $(this).addClass('addShadow');
@@ -40,12 +41,25 @@ $(document).ready(function () {
 
     // History tab Click
 
-    $('.history_tab').click(function() {
-        $('.topics_text_wrap').fadeOut('slow', function() {
-            location.href = '#jumpToHistory';
+    $('.history_tab').click(function () {
+        $('.topics_text_wrap').fadeOut('slow', function () {
+            location.href = '#history_wrap';
+
         })
+
     })
 
+    // History Section Timeline
 
+    $('.clickhere').click(function() {
+        $('.timeline_item').animate({
+            opacity: '0'
+        }, function() {
+            $('.timeline_item').animate({
+                opacity: '1'
+            }, 1000);
+            location.href = '#toHere';
+        })
+    })
 
 })
