@@ -12,33 +12,34 @@
 
 <body>
 
+    <div id="cursor"></div>
 
     <section id="main_wrap">
         <div class="tabs_wrap">
             <div class="topics_text_wrap">
                 <div id="topics_text">TOPICS.</div>
             </div>
-            <div class="tabs history_tab">
+            <div class="tabs history_tab  test-area">
                 <img src="./assets/images/letter_H.png" alt="" class="tab_icons history_icon">
                 <p class="tab_name history_name">History.</p>
             </div>
 
-            <div class="tabs speech_tab">
+            <div class="tabs speech_tab test-area">
                 <img src="./assets/images/letter_S.png" alt="" class="tab_icons speech_icon">
                 <p class="tab_name speech_name">Speech.</p>
             </div>
 
-            <div class="tabs news_tab">
+            <div class="tabs news_tab test-area">
                 <img src="./assets/images/letter_N.png" alt="" class="tab_icons news_icon">
                 <p class="tab_name news_name">News.</p>
             </div>
 
-            <div class="tabs watch_tab">
+            <div class="tabs watch_tab test-area">
                 <img src="./assets/images/letter_W.png" alt="" class="tab_icons watch_icon">
                 <p class="tab_name watch_name">Watch.</p>
             </div>
 
-            <div class="tabs business_tab">
+            <div class="tabs business_tab test-area">
                 <img src="./assets/images/letter_B.png" alt="" class="tab_icons business_icon">
                 <p class="tab_name business_name">Business.</p>
             </div>
@@ -49,16 +50,18 @@
 
     <section id="history_wrap">
 
+        <div class="down_arrow"></div>
 
         <!--TIMELINE-->
         <div class="timeline">
             <div class="timeline_body">
 
-                <div class="timeline_item">
+                <div id="topOfTimeline" class="timeline_item moorish_empire">
                     <p class="time">June 9th</p>
                     <div class="content">
-                        <h2 class="timeline_title">First Major Black Event</h2>
-                        <p class="timeline_paragraph"> his teenage years living in a series of foster homes after his
+                        <h2 class="timeline_title">The Moorish Empire</h2>
+                        <p class="timeline_paragraph moorish_empire_text"> his teenage years living in a series of
+                            foster homes after his
                             father's death and his mother's
                             hospitalization. He engaged in several illicit activities there, eventually being sentenced
                             to
@@ -72,7 +75,8 @@
                     <p class="time">June 9th</p>
                     <div class="content">
                         <h2 class="timeline_title">Second Major Black Event</h2>
-                        <p class="timeline_paragraph"> his teenage years living in a series of foster homes after his
+                        <p class="timeline_paragraph second_thing"> his teenage years living in a series of foster homes
+                            after his
                             father's death and his mother's
                             hospitalization. He engaged in several illicit activities there, eventually being sentenced
                             to
@@ -114,7 +118,8 @@
                     <p class="time">June 9th</p>
                     <div class="content">
                         <h2 class="timeline_title">Fifth Major Black Event</h2>
-                        <p class="timeline_paragraph"> his teenage years living in a series of foster homes after his
+                        <p class="timeline_paragraph fifth_major"> his teenage years living in a series of foster homes
+                            after his
                             father's death and his mother's
                             hospitalization. He engaged in several illicit activities there, eventually being sentenced
                             to
@@ -139,24 +144,36 @@
                     </div>
                 </div>
 
-                
+
 
             </div>
         </div>
         <!--// TIMELINE-->
-
+        <div class="up_arrow"></div>
 
 
     </section>
     <!--// HISTORY SECTION-->
 
-
-
-
-
     <script src="./assets/javascript/jquery-3.5.1.min.js"></script>
     <script src="./assets/javascript/bounce.min.js"></script>
     <script src="./assets/javascript/script.js"></script>
+
+    <script>
+        const cursor = document.querySelector('#cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: " + e.pageY + "px; left: " + e.pageX + 'px;');
+        })
+        document.addEventListener('click', () => {
+            cursor.classList.add('expand');
+
+            setTimeout(() => {
+                cursor.classList.remove('expand');
+            }, 500);
+        })
+    </script>
+
+
 </body>
 
 </html>

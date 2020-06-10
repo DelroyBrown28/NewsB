@@ -42,19 +42,20 @@ $(document).ready(function () {
     // History tab Click
 
     $('.history_tab').click(function () {
-        $('.topics_text_wrap').fadeOut('slow', function () {
+        $('.topics_text_wrap').fadeOut("slow", function () {
             location.href = '#history_wrap';
 
         })
+        $('.up_arrow, .down_arrow').delay(1800).fadeIn('slow');
 
     })
 
     // History Section Timeline
 
-    $('.clickhere').click(function() {
+    $('.down_arrow').click(function () {
         $('.timeline_item').animate({
             opacity: '0'
-        }, function() {
+        }, function () {
             $('.timeline_item').animate({
                 opacity: '1'
             }, 1000);
@@ -62,4 +63,61 @@ $(document).ready(function () {
         })
     })
 
+    $('.up_arrow').click(function () {
+        $('.timeline_item').animate({
+            opacity: '0'
+        }, function () {
+            $('.timeline_item').animate({
+                opacity: '1'
+            }, 1000);
+            location.href = '#topOfTimeline';
+        })
+    })
+
+    // BounceJS for timeline items
+
+    $('.moorish_empire').click(function () {
+        var bounce = new Bounce();
+        bounce
+            .rotate({
+                from: 0,
+                to: 0,
+                duration: 1000,
+                stiffness: 1
+            })
+            .scale({
+                from: {
+                    x: 1,
+                    y: 1
+                },
+                to: {
+                    x: 0.9,
+                    y: 1.1
+                },
+                easing: "sway",
+                duration: 1000,
+                delay: 0,
+                stiffness: 1
+            })
+            .translate({
+                from: {
+                    x: 0,
+                    y: 0
+                },
+                to: {
+                    x: 0,
+                    y: 0
+                },
+                easing: "bounce",
+                duration: 1000,
+                delay: 30,
+            })
+            .applyTo(document.querySelectorAll(".moorish_empire_text"));
+    })
+
+
+    // Cursors
+
+
 })
+
