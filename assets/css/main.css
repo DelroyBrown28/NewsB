@@ -14,9 +14,21 @@ html {
     display: none;
 }
 
-.bgColorChange {
+.BGColorChange {
     background-color: #2C2C2C;
     transition: 1s;
+}
+
+.BGColorChange_2 {
+    background-color: #fff;
+    transition: 1s;
+}
+
+.darkmodeShadow {
+    border-radius: 0px;
+    background: linear-gradient(145deg, #2f2f2f, #282828);
+    box-shadow: 10px 10px 20px #282828,
+        -10px -10px 20px #303030;
 }
 
 
@@ -129,6 +141,37 @@ a {
         height: 28px;
     }
 
+    .nightmode_wrap {
+        position: absolute;
+        width: 200px;
+        height: 50px;
+        bottom: 20px;
+        right: 15px;
+        display: flex;
+
+        border: 1px solid red;
+    }
+
+    .darkmode,
+    .lightmode {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+    }
+
+    .slider {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        background-color: #000;
+    }
+
+
+
     /*----------//  MAIN CONTENTS----------*/
     /*----------HISTORY CONTENTS----------*/
 
@@ -232,41 +275,6 @@ a {
         font-weight: 500;
         margin-bottom: 15px;
     }
-
-
-
-    .down_arrow {
-        background: url(/assets/images/arrowdown.png);
-        top: 20px;
-
-
-    }
-
-    .up_arrow {
-        background: url(/assets/images/uparrow.png);
-        bottom: 20px;
-        right: 20px;
-
-    }
-
-    .up_arrow,
-    .down_arrow {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: #000;
-        border-radius: 100%;
-        opacity: 1;
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        cursor: pointer;
-        transition: 0.5s;
-
-        display: none;
-
-    }
-
-
 
 
     /*----------//  HISTORY CONTENTS----------*/

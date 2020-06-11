@@ -14,8 +14,8 @@ $(document).ready(function () {
         })
     })
 
-    // hovers for tabs
 
+    // hovers for tabs
 
     $('.history_tab').hover(function () {
         $(this).addClass('addShadow');
@@ -52,27 +52,6 @@ $(document).ready(function () {
 
     // History Section Timeline
 
-    $('.down_arrow').click(function () {
-        $('.timeline_item').animate({
-            opacity: '0'
-        }, function () {
-            $('.timeline_item').animate({
-                opacity: '1'
-            }, 1000);
-            location.href = '#toHere';
-        })
-    })
-
-    $('.up_arrow').click(function () {
-        $('.timeline_item').animate({
-            opacity: '0'
-        }, function () {
-            $('.timeline_item').animate({
-                opacity: '1'
-            }, 1000);
-            location.href = '#topOfTimeline';
-        })
-    })
 
     // BounceJS for timeline items
 
@@ -116,8 +95,29 @@ $(document).ready(function () {
     })
 
 
-    // Cursors
+    // Darkmode/Lightmode
+
+    $('.lightmode').click(function () {
+        // changes to darkmode
+        $('.slider').animate({
+            left: '50%'
+        }, function() {
+            $('#main_body').css('backgroundColor', '#2C2C2C');
+            $('.tabs').removeClass('addShadow').addClass('darkmodeShadow');
+            
+        })
+    })
+    $('.darkmode').click(function () {
+        // changes to lightmode
+        $('.slider').animate({
+            left: '0%'
+        }, function() {
+            $('#main_body').css('backgroundColor', '#ffffff');
+            $('.tabs').removeClass('darkmodeShadow').addClass('addShadow');
+
+        })
+    })
+    return false;
 
 
 })
-
